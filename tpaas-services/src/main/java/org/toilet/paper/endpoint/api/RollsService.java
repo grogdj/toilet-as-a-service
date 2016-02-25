@@ -7,7 +7,10 @@ package org.toilet.paper.endpoint.api;
 
 import org.toilet.paper.endpoint.exception.BusinessException;
 import java.util.List;
+import javax.validation.constraints.NotNull;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import org.toilet.paper.model.Roll;
@@ -24,6 +27,13 @@ public interface RollsService {
     @Produces("application/json")
     @Path("/rolls/")
     public List<Roll> getAllRolls() throws BusinessException;
+    
+    @POST
+    @Produces("application/json")
+    @Consumes("application/json")
+    @Path("/rolls/")
+    public void addRoll(@NotNull Roll roll) throws BusinessException;
 
 
+    
 }

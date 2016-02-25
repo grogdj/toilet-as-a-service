@@ -5,6 +5,7 @@
  */
 package org.toilet.paper.model;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -14,34 +15,38 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Roll {
 
-    public enum Category {
-        FOOD, TECHNOLOGY, FASHION, ACCESORIES
+    public enum Type {
+        SMALL, MEDIUM, BIG
     };
-    private String id;
     private String name;
-    private int price;
-    private Category category;
-
-    public Roll(String name, int price) {
-        this.name = name;
-        this.price = price;
-    }
-
-    public Roll(String id, String name, int price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
+    private Date startDate = new Date();
+    private Type type = Type.MEDIUM;
 
     public Roll() {
+
     }
 
-    public String getId() {
-        return id;
+    public Roll(String name) {
+        this.name = name;
+        this.startDate = new Date();
+        this.type = Type.MEDIUM;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public Roll(String name, Type type) {
+        this.name = name;
+        this.type = type;
+    }
+
+    public Roll(String name, long startDate, Type type) {
+        this.name = name;
+        this.startDate = new Date(startDate);
+        this.type = type;
+    }
+
+    public Roll(String name, Date startDate, Type type) {
+        this.name = name;
+        this.startDate = startDate;
+        this.type = type;
     }
 
     public String getName() {
@@ -52,54 +57,20 @@ public class Roll {
         this.name = name;
     }
 
-    public int getPrice() {
-        return price;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Category getCategory() {
-        return category;
+    public Type getType() {
+        return type;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    @Override
-    public String toString() {
-        return "Item{" + "id=" + id + ", name=" + name + ", price=" + price + ", category=" + category + '}';
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 73 * hash + (this.name != null ? this.name.hashCode() : 0);
-        hash = 73 * hash + this.price;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Roll other = (Roll) obj;
-        if (this.price != other.price) {
-            return false;
-        }
-        if ((this.name == null) ? (other.name != null) : !this.name.equals(other.name)) {
-            return false;
-        }
-        return true;
+    public void setType(Type type) {
+        this.type = type;
     }
 
 }

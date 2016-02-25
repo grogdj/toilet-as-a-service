@@ -71,7 +71,7 @@
                 <artifactId>wildfly-swarm-plugin</artifactId>
                 <version>${version.wildfly-swarm}</version>
                 <configuration>
-                    <mainClass>org.toilet.paper.services.App</mainClass>
+                    <mainClass>org.toilet.paper.App</mainClass>
                     <properties>
                         <swarm.port.offset>3</swarm.port.offset>
                     </properties>
