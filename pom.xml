@@ -7,8 +7,8 @@
     <packaging>pom</packaging>
     <name>Toilet Paper As a Service</name>
     <properties>
-        <version.wildfly-swarm>1.0.0.Alpha6</version.wildfly-swarm>
-        <deltaspike.version>1.5.2</deltaspike.version>
+        <version.wildfly-swarm>1.0.0.Alpha8</version.wildfly-swarm>
+        <deltaspike.version>1.5.4</deltaspike.version>
         <docker.maven.plugin.version>0.13.5</docker.maven.plugin.version>
         <maven.min.version>3.2.3</maven.min.version>
         <maven.compiler.target>1.8</maven.compiler.target>

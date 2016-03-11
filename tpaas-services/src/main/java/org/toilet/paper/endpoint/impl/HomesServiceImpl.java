@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.SecurityContext;
 
@@ -26,6 +27,9 @@ public class HomesServiceImpl implements HomesService {
 
     @Context
     SecurityContext context;
+    
+    @Inject
+    private AlertServiceImpl alerts;
 
     public HomesServiceImpl() {
         
@@ -72,5 +76,12 @@ public class HomesServiceImpl implements HomesService {
         homes.get(homeId).getPersons().add(person);
         return personId;
     }
+
+    @Override
+    public void registerAlert() throws BusinessException {
+        alerts.registerAlert();
+    }
+    
+    
 
 }

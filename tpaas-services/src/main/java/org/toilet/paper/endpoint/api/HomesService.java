@@ -50,6 +50,8 @@ public interface HomesService {
     @Path("{id}/person")
     public String addPerson(@PathParam("id") String id, @NotNull Person person) throws BusinessException;
     
-    
+    @POST
+    @Path("alert")
+    public void registerAlert() throws BusinessException;
     
 }
