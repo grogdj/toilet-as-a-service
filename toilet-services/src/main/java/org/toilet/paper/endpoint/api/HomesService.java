@@ -9,8 +9,10 @@ import org.toilet.paper.endpoint.exception.BusinessException;
 import java.util.List;
 import javax.validation.constraints.NotNull;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -37,7 +39,18 @@ public interface HomesService {
     @Path("")
     public String addHome(@NotNull Home home) throws BusinessException;
 
+    @DELETE
+    @Consumes("application/json")
+    @Path("{id}")
+    public void deleteHome(@PathParam("id") String id) throws BusinessException;
+    
+    @PUT
+    @Produces("application/json")
+    @Consumes("application/json")
+    @Path("")
+    public void updateHome(@NotNull Home home) throws BusinessException;
 
+    
     @POST
     @Produces("application/json")
     @Consumes("application/json")

@@ -4,15 +4,15 @@
 
     <parent>
         <groupId>org.toilet</groupId>
-        <artifactId>toilet-paper-as-a-service</artifactId>
+        <artifactId>toilet-as-a-service</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     
-    <artifactId>tpaas-services</artifactId>
+    <artifactId>toilet-services</artifactId>
     <packaging>jar</packaging>
 
-    <name>Toilet Paper :: Services </name>
-    <url>http://salaboy.com</url>
+    <name>Toilet :: Services </name>
+    <url>http://marylandsupreme.tumblr.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

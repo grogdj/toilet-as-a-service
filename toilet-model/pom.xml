@@ -7,11 +7,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     
-    <artifactId>tpaas-model</artifactId>
+    <artifactId>toilet-model</artifactId>
     
     <packaging>jar</packaging>
 
-    <name>Toilet Paper :: Model</name>
+    <name>Toilet :: Model</name>
     <url>http://salaboy.com</url>
 
    

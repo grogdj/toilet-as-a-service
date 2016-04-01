@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.toilet</groupId>
-    <artifactId>toilet-paper-as-a-service</artifactId>
+    <artifactId>toilet-as-a-service</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Toilet Paper As a Service</name>
+    <name>Toilet As a Service</name>
     <properties>
         <version.wildfly-swarm>1.0.0.Alpha8</version.wildfly-swarm>
         <deltaspike.version>1.5.4</deltaspike.version>
@@ -16,9 +16,9 @@
     </properties>
 
     <modules>
-        <module>tpaas-model</module>
-        <module>tpaas-services</module>
 	<module>external-dockers</module>
+        <module>toilet-model</module>
+        <module>toilet-services</module>
     </modules>
   
     <repositories>

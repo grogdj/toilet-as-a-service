@@ -13,3 +13,5 @@ hs_err_pid*
 /tpaas-model/target/
 /tpaas-services/target/
 /external-dockers/keycloak/target/
+/toilet-model/target/
+/toilet-services/target/

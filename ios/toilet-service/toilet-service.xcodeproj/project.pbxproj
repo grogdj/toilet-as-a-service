@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		343653E31CA16FAF0058E065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343653E21CA16FAF0058E065 /* AppDelegate.swift */; };
+		343653E51CA16FAF0058E065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343653E41CA16FAF0058E065 /* ViewController.swift */; };
+		343653E81CA16FAF0058E065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343653E61CA16FAF0058E065 /* Main.storyboard */; };
+		343653EB1CA16FAF0058E065 /* toilet_service.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 343653E91CA16FAF0058E065 /* toilet_service.xcdatamodeld */; };
+		343653ED1CA16FAF0058E065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343653EC1CA16FAF0058E065 /* Assets.xcassets */; };
+		343653F01CA16FAF0058E065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343653EE1CA16FAF0058E065 /* LaunchScreen.storyboard */; };
+		343653FE1CA1A2AB0058E065 /* HomesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343653FD1CA1A2AB0058E065 /* HomesTableViewController.swift */; };
+		343654001CA1ACDD0058E065 /* HomeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343653FF1CA1ACDD0058E065 /* HomeDetailsViewController.swift */; };
+		343654021CA1B1090058E065 /* HomeDetailsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343654011CA1B1090058E065 /* HomeDetailsTabBarController.swift */; };
+		347BF3441CA31F3C00A174DB /* AddHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347BF3431CA31F3C00A174DB /* AddHomeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		343653DF1CA16FAF0058E065 /* toilet-service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "toilet-service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		343653E21CA16FAF0058E065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		343653E41CA16FAF0058E065 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		343653E71CA16FAF0058E065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		343653EA1CA16FAF0058E065 /* toilet_service.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = toilet_service.xcdatamodel; sourceTree = "<group>"; };
+		343653EC1CA16FAF0058E065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		343653EF1CA16FAF0058E065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		343653F11CA16FAF0058E065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		343653FD1CA1A2AB0058E065 /* HomesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomesTableViewController.swift; sourceTree = "<group>"; };
+		343653FF1CA1ACDD0058E065 /* HomeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailsViewController.swift; sourceTree = "<group>"; };
+		343654011CA1B1090058E065 /* HomeDetailsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailsTabBarController.swift; sourceTree = "<group>"; };
+		347BF3431CA31F3C00A174DB /* AddHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		343653DC1CA16FAF0058E065 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		343653D61CA16FAF0058E065 = {
+			isa = PBXGroup;
+			children = (
+				343653E11CA16FAF0058E065 /* toilet-service */,
+				343653E01CA16FAF0058E065 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		343653E01CA16FAF0058E065 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				343653DF1CA16FAF0058E065 /* toilet-service.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		343653E11CA16FAF0058E065 /* toilet-service */ = {
+			isa = PBXGroup;
+			children = (
+				343653E21CA16FAF0058E065 /* AppDelegate.swift */,
+				343653E41CA16FAF0058E065 /* ViewController.swift */,
+				343653E61CA16FAF0058E065 /* Main.storyboard */,
+				343653EC1CA16FAF0058E065 /* Assets.xcassets */,
+				343653EE1CA16FAF0058E065 /* LaunchScreen.storyboard */,
+				343653F11CA16FAF0058E065 /* Info.plist */,
+				343653E91CA16FAF0058E065 /* toilet_service.xcdatamodeld */,
+				343653FD1CA1A2AB0058E065 /* HomesTableViewController.swift */,
+				343653FF1CA1ACDD0058E065 /* HomeDetailsViewController.swift */,
+				343654011CA1B1090058E065 /* HomeDetailsTabBarController.swift */,
+				347BF3431CA31F3C00A174DB /* AddHomeViewController.swift */,
+			);
+			path = "toilet-service";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		343653DE1CA16FAF0058E065 /* toilet-service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 343653F41CA16FAF0058E065 /* Build configuration list for PBXNativeTarget "toilet-service" */;
+			buildPhases = (
+				343653DB1CA16FAF0058E065 /* Sources */,
+				343653DC1CA16FAF0058E065 /* Frameworks */,
+				343653DD1CA16FAF0058E065 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "toilet-service";
+			productName = "toilet-service";
+			productReference = 343653DF1CA16FAF0058E065 /* toilet-service.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		343653D71CA16FAF0058E065 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = ToiletService;
+				TargetAttributes = {
+					343653DE1CA16FAF0058E065 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 343653DA1CA16FAF0058E065 /* Build configuration list for PBXProject "toilet-service" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 343653D61CA16FAF0058E065;
+			productRefGroup = 343653E01CA16FAF0058E065 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				343653DE1CA16FAF0058E065 /* toilet-service */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		343653DD1CA16FAF0058E065 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343653F01CA16FAF0058E065 /* LaunchScreen.storyboard in Resources */,
+				343653ED1CA16FAF0058E065 /* Assets.xcassets in Resources */,
+				343653E81CA16FAF0058E065 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		343653DB1CA16FAF0058E065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343653FE1CA1A2AB0058E065 /* HomesTableViewController.swift in Sources */,
+				343653E51CA16FAF0058E065 /* ViewController.swift in Sources */,
+				343653E31CA16FAF0058E065 /* AppDelegate.swift in Sources */,
+				343654021CA1B1090058E065 /* HomeDetailsTabBarController.swift in Sources */,
+				343654001CA1ACDD0058E065 /* HomeDetailsViewController.swift in Sources */,
+				347BF3441CA31F3C00A174DB /* AddHomeViewController.swift in Sources */,
+				343653EB1CA16FAF0058E065 /* toilet_service.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		343653E61CA16FAF0058E065 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				343653E71CA16FAF0058E065 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		343653EE1CA16FAF0058E065 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				343653EF1CA16FAF0058E065 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		343653F21CA16FAF0058E065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		343653F31CA16FAF0058E065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		343653F51CA16FAF0058E065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "toilet-service/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.toilet.toilet-service";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		343653F61CA16FAF0058E065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "toilet-service/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.toilet.toilet-service";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		343653DA1CA16FAF0058E065 /* Build configuration list for PBXProject "toilet-service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343653F21CA16FAF0058E065 /* Debug */,
+				343653F31CA16FAF0058E065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		343653F41CA16FAF0058E065 /* Build configuration list for PBXNativeTarget "toilet-service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343653F51CA16FAF0058E065 /* Debug */,
+				343653F61CA16FAF0058E065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		343653E91CA16FAF0058E065 /* toilet_service.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				343653EA1CA16FAF0058E065 /* toilet_service.xcdatamodel */,
+			);
+			currentVersion = 343653EA1CA16FAF0058E065 /* toilet_service.xcdatamodel */;
+			path = toilet_service.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 343653D71CA16FAF0058E065 /* Project object */;
+}

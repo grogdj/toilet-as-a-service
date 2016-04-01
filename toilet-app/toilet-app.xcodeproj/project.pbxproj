@@ -12,6 +12,10 @@
 		349CC5961C91C5AA00E1C783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349CC5941C91C5AA00E1C783 /* Main.storyboard */; };
 		349CC5981C91C5AA00E1C783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349CC5971C91C5AA00E1C783 /* Assets.xcassets */; };
 		349CC59B1C91C5AA00E1C783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349CC5991C91C5AA00E1C783 /* LaunchScreen.storyboard */; };
+		349CC5A31C92DFD500E1C783 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CC5A21C92DFD500E1C783 /* DashboardViewController.swift */; };
+		349CC5A61C982DAB00E1C783 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 349CC5A41C982DAB00E1C783 /* Model.xcdatamodeld */; };
+		349CC5A81C98352600E1C783 /* NewHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CC5A71C98352600E1C783 /* NewHomeController.swift */; };
+		349CC5AA1C98802D00E1C783 /* HomeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CC5A91C98802D00E1C783 /* HomeDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		349CC5971C91C5AA00E1C783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		349CC59A1C91C5AA00E1C783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		349CC59C1C91C5AA00E1C783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		349CC5A21C92DFD500E1C783 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		349CC5A51C982DAB00E1C783 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		349CC5A71C98352600E1C783 /* NewHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHomeController.swift; sourceTree = "<group>"; };
+		349CC5A91C98802D00E1C783 /* HomeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				349CC5901C91C5AA00E1C783 /* AppDelegate.swift */,
 				349CC5921C91C5AA00E1C783 /* ViewController.swift */,
 				349CC5941C91C5AA00E1C783 /* Main.storyboard */,
+				349CC5A41C982DAB00E1C783 /* Model.xcdatamodeld */,
 				349CC5971C91C5AA00E1C783 /* Assets.xcassets */,
 				349CC5991C91C5AA00E1C783 /* LaunchScreen.storyboard */,
 				349CC59C1C91C5AA00E1C783 /* Info.plist */,
+				349CC5A21C92DFD500E1C783 /* DashboardViewController.swift */,
+				349CC5A71C98352600E1C783 /* NewHomeController.swift */,
+				349CC5A91C98802D00E1C783 /* HomeDetailsViewController.swift */,
 			);
 			path = "toilet-app";
 			sourceTree = "<group>";
@@ -136,7 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				349CC5931C91C5AA00E1C783 /* ViewController.swift in Sources */,
+				349CC5A31C92DFD500E1C783 /* DashboardViewController.swift in Sources */,
+				349CC5AA1C98802D00E1C783 /* HomeDetailsViewController.swift in Sources */,
 				349CC5911C91C5AA00E1C783 /* AppDelegate.swift in Sources */,
+				349CC5A81C98352600E1C783 /* NewHomeController.swift in Sources */,
+				349CC5A61C982DAB00E1C783 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +300,22 @@
 				349CC5A11C91C5AA00E1C783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		349CC5A41C982DAB00E1C783 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				349CC5A51C982DAB00E1C783 /* Model.xcdatamodel */,
+			);
+			currentVersion = 349CC5A51C982DAB00E1C783 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 349CC5851C91C5AA00E1C783 /* Project object */;
 }

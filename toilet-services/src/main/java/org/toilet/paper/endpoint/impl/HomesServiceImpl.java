@@ -45,6 +45,8 @@ public class HomesServiceImpl implements HomesService {
         baths.add(bathroom);
         String id = StringIdGenerator.generateId();
         homes.put(id, new Home(id, "my home", persons, baths));
+        id = StringIdGenerator.generateId();
+        homes.put(id, new Home(id, "my home 2", null, null));
     }
 
     @Override
@@ -60,6 +62,20 @@ public class HomesServiceImpl implements HomesService {
 
         return id;
     }
+
+    @Override
+    public void deleteHome(String id) throws BusinessException {
+        homes.remove(id);
+    }
+
+    @Override
+    public void updateHome(Home home) throws BusinessException {
+        homes.remove(home.getId());
+        homes.put(home.getId(), home);
+    }
+    
+    
+    
 
     @Override
     public String addBathroom(String homeId, Bathroom bath) throws BusinessException {
