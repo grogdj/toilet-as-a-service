@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>org.toilet</groupId>
-        <artifactId>toilet-paper-as-a-service</artifactId>
+        <artifactId>toilet-as-a-service</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

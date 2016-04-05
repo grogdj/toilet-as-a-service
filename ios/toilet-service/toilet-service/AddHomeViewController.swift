@@ -44,7 +44,7 @@ class AddHomeViewController: UIViewController {
                 print("POST: " + postString)
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     
-                    [self performSegueWithIdentifier:@"SeguePopupSquad" sender:sender];    
+//                    [self performSegueWithIdentifier:@"SeguePopupSquad" sender:sender];    
                 })
                 
                 

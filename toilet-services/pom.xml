@@ -27,7 +27,7 @@
     <dependencies>
         <dependency>
             <groupId>org.toilet</groupId>
-            <artifactId>tpaas-model</artifactId>
+            <artifactId>toilet-model</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
