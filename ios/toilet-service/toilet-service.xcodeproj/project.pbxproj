@@ -17,6 +17,8 @@
 		343654001CA1ACDD0058E065 /* HomeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343653FF1CA1ACDD0058E065 /* HomeDetailsViewController.swift */; };
 		343654021CA1B1090058E065 /* HomeDetailsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343654011CA1B1090058E065 /* HomeDetailsTabBarController.swift */; };
 		347BF3441CA31F3C00A174DB /* AddHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347BF3431CA31F3C00A174DB /* AddHomeViewController.swift */; };
+		34B705D81CB503800037C2BF /* HomeBathroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B705D71CB503800037C2BF /* HomeBathroomsViewController.swift */; };
+		34B705DA1CB503D70037C2BF /* HomePeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B705D91CB503D70037C2BF /* HomePeopleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		343653FF1CA1ACDD0058E065 /* HomeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailsViewController.swift; sourceTree = "<group>"; };
 		343654011CA1B1090058E065 /* HomeDetailsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailsTabBarController.swift; sourceTree = "<group>"; };
 		347BF3431CA31F3C00A174DB /* AddHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeViewController.swift; sourceTree = "<group>"; };
+		34B705D71CB503800037C2BF /* HomeBathroomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBathroomsViewController.swift; sourceTree = "<group>"; };
+		34B705D91CB503D70037C2BF /* HomePeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePeopleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				343653E21CA16FAF0058E065 /* AppDelegate.swift */,
 				343653E41CA16FAF0058E065 /* ViewController.swift */,
 				343653E61CA16FAF0058E065 /* Main.storyboard */,
+				34B705D91CB503D70037C2BF /* HomePeopleViewController.swift */,
 				343653EC1CA16FAF0058E065 /* Assets.xcassets */,
 				343653EE1CA16FAF0058E065 /* LaunchScreen.storyboard */,
 				343653F11CA16FAF0058E065 /* Info.plist */,
@@ -75,6 +80,7 @@
 				343653FF1CA1ACDD0058E065 /* HomeDetailsViewController.swift */,
 				343654011CA1B1090058E065 /* HomeDetailsTabBarController.swift */,
 				347BF3431CA31F3C00A174DB /* AddHomeViewController.swift */,
+				34B705D71CB503800037C2BF /* HomeBathroomsViewController.swift */,
 			);
 			path = "toilet-service";
 			sourceTree = "<group>";
@@ -151,10 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				343653FE1CA1A2AB0058E065 /* HomesTableViewController.swift in Sources */,
+				34B705D81CB503800037C2BF /* HomeBathroomsViewController.swift in Sources */,
 				343653E51CA16FAF0058E065 /* ViewController.swift in Sources */,
 				343653E31CA16FAF0058E065 /* AppDelegate.swift in Sources */,
 				343654021CA1B1090058E065 /* HomeDetailsTabBarController.swift in Sources */,
 				343654001CA1ACDD0058E065 /* HomeDetailsViewController.swift in Sources */,
+				34B705DA1CB503D70037C2BF /* HomePeopleViewController.swift in Sources */,
 				347BF3441CA31F3C00A174DB /* AddHomeViewController.swift in Sources */,
 				343653EB1CA16FAF0058E065 /* toilet_service.xcdatamodeld in Sources */,
 			);

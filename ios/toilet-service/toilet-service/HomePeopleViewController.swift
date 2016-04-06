@@ -1,24 +1,21 @@
 //
-//  HomeDetailsViewController.swift
+//  HomePeopleViewController.swift
 //  toilet-service
 //
-//  Created by Mauricio Salatino on 22/03/2016.
+//  Created by Mauricio Salatino on 06/04/2016.
 //  Copyright © 2016 ToiletService. All rights reserved.
 //
 
 import UIKit
 
-class HomeDetailsViewController: UIViewController {
-    
+class HomePeopleViewController: UIViewController {
+
     var home: NSDictionary = NSDictionary();
-    
-    @IBOutlet weak var homeNameText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tbc = self.tabBarController as! HomeDetailsTabBarController
+        let tbc = self.tabBarController  as! HomeDetailsTabBarController
         home = tbc.home
-        homeNameText.text = home["name"] as? String
         tbc.title = home["name"] as? String
         // Do any additional setup after loading the view.
     }

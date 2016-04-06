@@ -9,22 +9,47 @@
 import UIKit
 
 class AddHomeViewController: UIViewController {
-
+    
     @IBOutlet weak var homeNameText: UITextField!
     
-    @IBAction func saveButtonAction(sender: AnyObject) {
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var newHome: Dictionary<String, AnyObject> = [:];
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        
         let url = NSURL(string: serviceUrl)!
         
         let request = NSMutableURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
-        let postParams = ["name": homeNameText.text!,"persons": [], "bathrooms": []] as Dictionary<String, AnyObject>
         
-        request.HTTPMethod = "POST"
+        newHome = ["name": homeNameText.text!,"persons": [], "bathrooms": []];
+        
+        request.HTTPMethod = "POST";
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
         do {
-            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(postParams, options: NSJSONWritingOptions())
-            print(postParams)
+            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(newHome, options: NSJSONWritingOptions())
+            
         } catch {
             print("bad things happened")
         }
@@ -43,35 +68,18 @@ class AddHomeViewController: UIViewController {
                 // Print what we got from the call
                 print("POST: " + postString)
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    print(">>> Post sent correctly");
                     
-//                    [self performSegueWithIdentifier:@"SeguePopupSquad" sender:sender];    
+                    
                 })
                 
                 
             }
             
         }).resume()
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

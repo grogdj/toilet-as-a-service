@@ -14,7 +14,7 @@ class HomeDetailsTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Toilet fun"
         // Do any additional setup after loading the view.
     }
 

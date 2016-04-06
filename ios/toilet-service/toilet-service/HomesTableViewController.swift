@@ -16,6 +16,19 @@ class HomesTableViewController: UITableViewController {
     
     var homes: NSMutableArray = NSMutableArray();
     
+    @IBAction func unwindToHomeList(segue: UIStoryboardSegue){
+        print("Unwinding.... ")
+        if(segue.sourceViewController .isKindOfClass(AddHomeViewController)){
+            if let sourceViewController = segue.sourceViewController as? AddHomeViewController {
+                let newHome = sourceViewController.newHome
+                let newIndexPath = NSIndexPath(forRow: homes.count, inSection: 0)
+                homes.addObject(newHome)
+                homesTable.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: serviceUrl)!) { (data, response, error) -> Void in
@@ -26,7 +39,7 @@ class HomesTableViewController: UITableViewController {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.homesTable.reloadData()
                     })
-
+                    
                 } catch {
                     print("Error parsing JSON")
                 }
@@ -54,7 +67,7 @@ class HomesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homes.count
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         if let homeName = homes[indexPath.row]["name"]{
@@ -85,7 +98,7 @@ class HomesTableViewController: UITableViewController {
                     let url = NSURL(string: "\(serviceUrl)\(finalId)")!
                     let request = NSMutableURLRequest(URL: url)
                     let session = NSURLSession.sharedSession()
-
+                    
                     request.HTTPMethod = "DELETE"
                     request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
                     
@@ -101,7 +114,7 @@ class HomesTableViewController: UITableViewController {
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
                             self.homes.removeObjectAtIndex(indexPath.row)
                             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//                            self.homesTableView.reloadData()
+                            //                            self.homesTableView.reloadData()
                         })
                         
                         
@@ -111,8 +124,8 @@ class HomesTableViewController: UITableViewController {
             }else{
                 print("Wrong ID");
             }
-
-
+            
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
@@ -125,19 +138,19 @@ class HomesTableViewController: UITableViewController {
     
     
     /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
+     // Override to support rearranging the table view.
+     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+     
+     }
+     */
     
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
+     // Override to support conditional rearranging of the table view.
+     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
     
     
     // MARK: - Navigation
