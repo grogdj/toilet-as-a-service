@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.toilet.paper.endpoint.impl;
+package org.toilet.core.impl;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-import org.toilet.paper.endpoint.exception.BusinessException;
+import org.toilet.core.exceptions.BusinessException;
 
 /**
  *

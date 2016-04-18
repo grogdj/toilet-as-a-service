@@ -29,20 +29,14 @@ class AddHomeViewController: UIViewController {
     
     
     
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
+    @IBAction func saveNewHome(sender: AnyObject) {
         
         let url = NSURL(string: serviceUrl)!
         
         let request = NSMutableURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         
-        newHome = ["name": homeNameText.text!,"persons": [], "bathrooms": []];
+        newHome = ["name": homeNameText.text!];
         
         request.HTTPMethod = "POST";
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
@@ -64,12 +58,14 @@ class AddHomeViewController: UIViewController {
             }
             
             // Read the JSON
-            if let postString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
+            if let homeId = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
                 // Print what we got from the call
-                print("POST: " + postString)
+                
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    print(">>> Post sent correctly");
-                    
+                    // do something if needed
+                    print("setting id \(homeId)...")
+                    self.newHome["id"] = homeId;
+                    self.performSegueWithIdentifier("unwindToHomeList",sender: self)
                     
                 })
                 
@@ -77,6 +73,15 @@ class AddHomeViewController: UIViewController {
             }
             
         }).resume()
+    }
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        
         
         
     }

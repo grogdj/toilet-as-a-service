@@ -3,26 +3,41 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.toilet.paper.model;
+package org.toilet.model;
 
+import java.util.ArrayList;
 import java.util.List;
+import javax.ws.rs.core.Link;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
  * @author salaboy
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Home {
 
     private String id;
     private String name;
-    private List<Person> persons;
-    private List<Bathroom> bathrooms;
+
+    @XmlTransient
+    private List<Person> persons = new ArrayList<>();
+ 
+    @XmlTransient
+    private List<Bathroom> bathrooms = new ArrayList<>();
+
+    @XmlJavaTypeAdapter(Link.JaxbAdapter.class)
+    private Link self;
 
     public Home() {
     }
 
-    public Home(String id, String name, List<Person> persons, List<Bathroom> bathrooms) {
-        this.id = id;
+    public Home(String name, List<Person> persons, List<Bathroom> bathrooms) {
         this.name = name;
         this.persons = persons;
         this.bathrooms = bathrooms;
@@ -51,13 +66,21 @@ public class Home {
     public void setPersons(List<Person> persons) {
         this.persons = persons;
     }
-
+    
     public List<Bathroom> getBathrooms() {
         return bathrooms;
     }
 
     public void setBathrooms(List<Bathroom> bathrooms) {
         this.bathrooms = bathrooms;
+    }
+
+    public Link getSelf() {
+        return self;
+    }
+
+    public void setSelf(Link self) {
+        this.self = self;
     }
 
 }

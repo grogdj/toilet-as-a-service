@@ -18,20 +18,21 @@ class HomesTableViewController: UITableViewController {
     
     @IBAction func unwindToHomeList(segue: UIStoryboardSegue){
         print("Unwinding.... ")
-        if(segue.sourceViewController .isKindOfClass(AddHomeViewController)){
+        if(segue.sourceViewController.isKindOfClass(AddHomeViewController)){
             if let sourceViewController = segue.sourceViewController as? AddHomeViewController {
                 let newHome = sourceViewController.newHome
                 let newIndexPath = NSIndexPath(forRow: homes.count, inSection: 0)
+                
                 homes.addObject(newHome)
                 homesTable.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            
         }
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func loadHomesList(){
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: serviceUrl)!) { (data, response, error) -> Void in
+            
             if let urlContent = data {
                 do{
                     
@@ -46,6 +47,12 @@ class HomesTableViewController: UITableViewController {
             }
             
             }.resume()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadHomesList()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -132,7 +139,6 @@ class HomesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        print(indexPath.row)
         return indexPath;
     }
     
@@ -161,11 +167,11 @@ class HomesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if let cell = sender as? UITableViewCell {
             let i = homesTable.indexPathForCell(cell)!.row
-            print("data here -> "+String(i))
+            
             
             let vc = segue.destinationViewController as! HomeDetailsTabBarController
             print("data here2 -> "+String(homes[i]))
-            vc.home = homes[i] as! NSDictionary
+            vc.home = NSMutableDictionary(dictionary: homes[i] as! NSDictionary)
             
         }
         

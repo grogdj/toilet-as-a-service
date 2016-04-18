@@ -1,18 +1,16 @@
-package org.toilet.paper.endpoint.impl;
+package org.toilet.core.impl;
 
 
-import org.toilet.paper.endpoint.exception.BusinessException;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.SecurityContext;
+import org.toilet.core.api.RollsService;
+import org.toilet.core.exceptions.BusinessException;
 
 
-import org.toilet.paper.endpoint.api.RollsService;
-import org.toilet.paper.model.Roll;
+import org.toilet.model.Roll;
 
 /**
  *
@@ -22,9 +20,6 @@ import org.toilet.paper.model.Roll;
 public class RollsServiceImpl implements RollsService {
 
     private List<Roll> items = new ArrayList<Roll>();
-
-    @Context
-    SecurityContext context;
 
     public RollsServiceImpl() {
         items.add(new Roll("firstRoll", new Date(), Roll.Type.BIG));

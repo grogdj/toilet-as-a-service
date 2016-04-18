@@ -10,7 +10,7 @@ import UIKit
 
 class HomeDetailsTabBarController: UITabBarController {
 
-    var home: NSDictionary = NSDictionary();
+    var home: NSMutableDictionary = NSMutableDictionary();
     
     override func viewDidLoad() {
         super.viewDidLoad()

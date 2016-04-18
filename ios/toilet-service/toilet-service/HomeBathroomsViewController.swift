@@ -17,12 +17,17 @@ class HomeBathroomsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadBathrooms()
+    }
+    
+    func loadBathrooms(){
         let tbc = self.tabBarController  as! HomeDetailsTabBarController
         home = tbc.home
         tbc.title = home["name"] as? String
         // Do any additional setup after loading the view.
-        let bathService = "\(serviceUrl)/\(home["id"])/bathrooms";
+        let bathService = tbc.home["bathrooms"] as! String;
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: bathService)!) { (data, response, error) -> Void in
+            
             if let urlContent = data {
                 do{
                     
@@ -38,7 +43,6 @@ class HomeBathroomsViewController: UIViewController {
             
             }.resume()
 
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +50,25 @@ class HomeBathroomsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - Table view data source
+     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return baths.count
+    }
+    
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        if let bathName = baths[indexPath.row]["name"]{
+            cell.textLabel?.text = String(bathName!)
+        } else{
+            cell.textLabel?.text = String("No Name")
+        }
+        return cell
+    }
 
     /*
     // MARK: - Navigation

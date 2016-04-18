@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.toilet.paper.endpoint.impl;
+package org.toilet.core.impl;
 
 import java.util.Date;
 import java.util.logging.Level;

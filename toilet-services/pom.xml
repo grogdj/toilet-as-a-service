@@ -15,11 +15,7 @@
     <url>http://marylandsupreme.tumblr.com</url>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>4.11</junit.version>
-        <cdi.version>1.2</cdi.version>
-        <docker.from>jboss/base-jdk:8</docker.from> 
-        <docker.assemblyDescriptorRef>artifact</docker.assemblyDescriptorRef>
+        
         <docker.image>tpaas/tpaas-services:latest</docker.image>
     </properties>
     
@@ -27,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>org.toilet</groupId>
-            <artifactId>toilet-model</artifactId>
+            <artifactId>toilet-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -46,13 +42,15 @@
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>jaxrs-weld</artifactId>
-            <version>${version.wildfly-swarm}</version>
         </dependency>
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>keycloak</artifactId>
-            <version>${version.wildfly-swarm}</version>
         </dependency>
+<!--        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>swagger</artifactId>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.deltaspike.modules</groupId>
             <artifactId>deltaspike-scheduler-module-api</artifactId>
@@ -108,7 +106,7 @@
                 <artifactId>wildfly-swarm-plugin</artifactId>
                 <version>${version.wildfly-swarm}</version>
                 <configuration>
-                    <mainClass>org.toilet.paper.App</mainClass>
+                    <mainClass>org.toilet.services.App</mainClass>
                     <properties>
                         <swarm.port.offset>3</swarm.port.offset>
                     </properties>

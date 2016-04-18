@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.toilet.paper;
+package org.toilet.services;
 
 
 
@@ -25,6 +25,14 @@ public class App {
 
         JAXRSArchive deployment = ShrinkWrap.create(JAXRSArchive.class);
         deployment.as(Secured.class);
+// 
+//        // Enable the swagger bits
+//        SwaggerArchive archive = deployment.as(SwaggerArchive.class);
+//        // Tell swagger where our resources are
+//        archive.setResourcePackages("org.toilet.paper.endpoint");
+//        archive.setTitle("Toilet Service");
+        
+        
         deployment.setContextRoot("/api");
         deployment.addAsLibrary(container.createDefaultDeployment());
         deployment.addAllDependencies();

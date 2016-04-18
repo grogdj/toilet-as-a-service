@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.toilet.paper.endpoint.config;
+package org.toilet.services.endpoint.config;
 
 import java.io.IOException;
 import java.util.logging.Logger;
